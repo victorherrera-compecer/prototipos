@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificación ISO 9001 para Manufactura | COMPECER Organismo Certificador</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        compecerBlue: '#040079',
+                        compecerGold: '#ffb000',
+                        compecerLightGrey: '#999999',
+                        compecerDarkGrey: '#4d4d4d',
+                        lightBg: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(4, 0, 121, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-compecerDarkGrey font-sans antialiased selection:bg-compecerBlue selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <div class="h-10 w-10 rounded-lg bg-compecerBlue flex items-center justify-center text-white font-extrabold text-xl tracking-wider">
+                        C
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-compecerBlue tracking-tight block leading-none">COMPECER</span>
+                        <span class="text-[9px] font-semibold text-compecerLightGrey tracking-widest uppercase block mt-0.5">Organismo de Certificación</span>
+                    </div>
+                </div>
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#dolores" class="text-compecerDarkGrey hover:text-compecerBlue transition-colors">¿Por qué ISO 9001?</a>
+                    <a href="#autoridad" class="text-compecerDarkGrey hover:text-compecerBlue transition-colors">Nuestra Autoridad</a>
+                    <a href="#proceso" class="text-compecerDarkGrey hover:text-compecerBlue transition-colors">Proceso</a>
+                    <a href="#sectores" class="text-compecerDarkGrey hover:text-compecerBlue transition-colors">Sectores</a>
+                    <a href="#faq" class="text-compecerDarkGrey hover:text-compecerBlue transition-colors">Preguntas Frecuentes</a>
+                </nav>
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:+525500000000" class="text-sm font-semibold text-compecerBlue hover:underline flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> LLAMAR AHORA
+                    </a>
+                    <a href="#formulario" class="bg-compecerBlue text-white hover:bg-opacity-90 px-5 tap-target py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md shadow-blue-900/10 hover:-translate-y-0.5">
+                        Cotizar Certificación
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-compecerDarkGrey hover:text-compecerBlue focus:outline-none p-2" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden bg-white border-t border-slate-100 transition-all duration-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3 text-center">
+                <a href="#dolores" class="block px-3 py-3 rounded-md text-base font-medium text-compecerDarkGrey hover:bg-slate-50 hover:text-compecerBlue">¿Por qué ISO 9001?</a>
+                <a href="#autoridad" class="block px-3 py-3 rounded-md text-base font-medium text-compecerDarkGrey hover:bg-slate-50 hover:text-compecerBlue">Nuestra Autoridad</a>
+                <a href="#proceso" class="block px-3 py-3 rounded-md text-base font-medium text-compecerDarkGrey hover:bg-slate-50 hover:text-compecerBlue">Proceso</a>
+                <a href="#sectores" class="block px-3 py-3 rounded-md text-base font-medium text-compecerDarkGrey hover:bg-slate-50 hover:text-compecerBlue">Sectores</a>
+                <a href="#faq" class="block px-3 py-3 rounded-md text-base font-medium text-compecerDarkGrey hover:bg-slate-50 hover:text-compecerBlue">Preguntas Frecuentes</a>
+                <div class="pt-4 border-t border-slate-100 flex flex-col items-center gap-3">
+                    <a href="tel:+525500000000" class="text-sm font-semibold text-compecerBlue py-2">
+                        <i class="fa-solid fa-phone mr-1"></i> LLAMAR AHORA
+                    </a>
+                    <a href="#formulario" class="w-full max-w-xs bg-compecerBlue text-white hover:bg-opacity-90 py-3 rounded-lg text-sm font-semibold transition-all block">
+                        Cotizar Certificación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-12 pb-24 md:py-24 border-b border-slate-100 overflow-hidden relative">
+        <!-- Subtle Grid Background Decor -->
+        <div class="absolute inset-0 opacity-[0.02] pointer-events-none bg-[radial-gradient(#040079_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Area -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-full text-xs font-semibold text-compecerBlue tracking-wide uppercase">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Certificación bajo la norma ISO 9001:2015
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-compecerBlue leading-tight tracking-tight">
+                        No pierda más contratos ni licitaciones por falta de <span class="underline decoration-compecerGold decoration-wavy decoration-3 underline-offset-8">Certificación ISO 9001</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Impulse la competitividad de su planta de manufactura. Estandarice sus procesos bajo estándares mundiales, asegure la calidad de sus productos y comience a ganar proyectos de gran escala con <strong class="text-compecerBlue">COMPECER</strong>.
+                    </p>
+
+                    <!-- Trust USP Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 max-w-md mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2.5 text-left bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-compecerBlue text-lg"></i>
+                            <div>
+                                <span class="block text-xs font-bold text-compecerBlue">Acreditación EMA</span>
+                                <span class="block text-[10px] text-slate-500">Validez Internacional</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-left bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm">
+                            <i class="fa-solid fa-globe text-compecerBlue text-lg"></i>
+                            <div>
+                                <span class="block text-xs font-bold text-compecerBlue">Miembro IAF</span>
+                                <span class="block text-[10px] text-slate-500">Reconocimiento Global</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-left bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-bolt text-compecerBlue text-lg"></i>
+                            <div>
+                                <span class="block text-xs font-bold text-compecerBlue">Proceso Ágil</span>
+                                <span class="block text-[10px] text-slate-500">Sin burocracia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to action actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#formulario" class="w-full sm:w-auto text-center bg-compecerBlue text-white hover:bg-opacity-95 px-8 py-4 rounded-xl text-base font-bold shadow-lg shadow-blue-950/20 transition-all hover:-translate-y-0.5">
+                            Cotizar Mi Certificación
+                        </a>
+                        <a href="#dolores" class="w-full sm:w-auto text-center bg-white border border-slate-300 text-compecerDarkGrey hover:border-compecerBlue hover:text-compecerBlue px-8 py-4 rounded-xl text-base font-semibold transition-all">
+                            Saber Más <i class="fa-solid fa-arrow-down ml-1.5 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphic / Image Area -->
+                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+                    <div class="relative mx-auto max-w-[420px] lg:max-w-none">
+                        <!-- Background Accent Shape -->
+                        <div class="absolute -top-6 -left-6 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+                        <div class="absolute -bottom-10 -right-6 w-72 h-72 bg-amber-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+                        
+                        <!-- Main Image Frame with CSS Badge -->
+                        <div class="relative bg-white p-4 rounded-2xl shadow-xl border border-slate-100">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Planta de manufactura con enfoque en auditoría de calidad" class="rounded-xl object-cover w-full h-[320px] sm:h-[380px] lg:h-[420px]">
+                            
+                            <!-- Overlay card -->
+                            <div class="absolute bottom-8 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 max-w-[240px] hidden sm:flex items-center gap-3">
+                                <div class="bg-emerald-100 p-2.5 rounded-lg text-emerald-600">
+                                    <i class="fa-solid fa-circle-check text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xs text-compecerBlue">Auditoría Aprobada</h4>
+                                    <p class="text-[10px] text-slate-500">Asegure su entrada a cadenas de suministro globales hoy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE DE DOLORES (THE PAIN) -->
+    <section id="dolores" class="py-20 md:py-28 bg-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-full">El Desafío Industrial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                    ¿Su planta está quedando fuera de las grandes oportunidades?
+                </h2>
+                <p class="text-slate-600 mt-4 text-base md:text-lg">
+                    En el sector de la manufactura y los servicios industriales, no contar con una certificación ISO 9001 vigente no es un detalle menor; es una barrera comercial crítica.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dolor 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-12 w-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-compecerBlue mb-3">Licitaciones Perdidas</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tanto instituciones de gobierno como grandes corporativos multinacionales establecen como **requisito obligatorio** la certificación ISO 9001. Sin ella, su propuesta técnica queda descalificada de inmediato.
+                    </p>
+                </div>
+
+                <!-- Dolor 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-12 w-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-ban text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-compecerBlue mb-3">Pérdida de Clientes Clave</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Los clientes actuales aumentan sus exigencias de calidad anualmente. La falta de un Sistema de Gestión de Calidad (SGC) auditado genera desconfianza y los empuja a buscar competidores certificados.
+                    </p>
+                </div>
+
+                <!-- Dolor 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="h-12 w-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-arrows-spin text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-compecerBlue mb-3">Procesos Ineficientes</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sin un marco de trabajo ordenado, surgen mermas, errores en producción, reprocesos costosos e inconsistencia en los productos. El costo de la no-calidad devora silenciosamente sus márgenes de utilidad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Warning Callout Box -->
+            <div class="mt-12 bg-amber-50/50 rounded-2xl border border-amber-200 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-amber-100 text-compecerGold p-3 rounded-full shrink-0">
+                        <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-compecerBlue text-lg">Evite que su competencia se quede con su mercado</h4>
+                        <p class="text-sm text-slate-600 mt-1">Obtenga el respaldo internacional que sus prospectos exigen y demuestre solidez operativa en cada propuesta comercial.</p>
+                    </div>
+                </div>
+                <a href="#formulario" class="shrink-0 bg-compecerBlue text-white hover:bg-opacity-90 px-6 py-3 rounded-xl text-sm font-bold transition-all shadow-md">
+                    Diagnóstico de Certificación <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE DE AUTORIDAD (THE TRUST) -->
+    <section id="autoridad" class="py-20 md:py-28 bg-slate-50 border-y border-slate-100 scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Authority Stats & Info (Left side) -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-100 px-3 py-1 rounded-full">Respaldo Institucional</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                            Garantía de Reconocimiento y Validez Internacional
+                        </h2>
+                        <p class="text-slate-600 mt-4 leading-relaxed text-base">
+                            En **COMPECER**, no solo auditamos; impulsamos la competitividad y el crecimiento ordenado de las organizaciones mediante procesos de evaluación rigurosos, ágiles y con valor global.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- USP 1 -->
+                        <div class="flex gap-4">
+                            <div class="bg-white p-3 rounded-xl border border-slate-200/60 shadow-sm shrink-0 h-12 w-12 flex items-center justify-center text-compecerBlue">
+                                <i class="fa-solid fa-award text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-compecerBlue text-base">Acreditados por la EMA e Incorporados al IAF</h3>
+                                <p class="text-slate-500 text-sm mt-1">
+                                    Nuestra acreditación por la **Entidad Mexicana de Acreditación (EMA)** y la incorporación al **Foro Internacional de Acreditación (IAF)** garantiza que su certificado sea reconocido en México y en todo el mundo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- USP 2 -->
+                        <div class="flex gap-4">
+                            <div class="bg-white p-3 rounded-xl border border-slate-200/60 shadow-sm shrink-0 h-12 w-12 flex items-center justify-center text-compecerBlue">
+                                <i class="fa-solid fa-cubes text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-compecerBlue text-base">Soluciones Integrales</h3>
+                                <p class="text-slate-500 text-sm mt-1">
+                                    Especialistas en certificación de Sistemas de Gestión (ISO), Competencias Laborales (ISO 17024 e incorporados a la red nacional CONOCER), así como en evaluación de productos, procesos y normativas NOM/NMX.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- USP 3 -->
+                        <div class="flex gap-4">
+                            <div class="bg-white p-3 rounded-xl border border-slate-200/60 shadow-sm shrink-0 h-12 w-12 flex items-center justify-center text-compecerBlue">
+                                <i class="fa-solid fa-earth-americas text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-compecerBlue text-base">Presencia Internacional</h3>
+                                <p class="text-slate-500 text-sm mt-1">
+                                    Con cobertura estratégica y operaciones en **México, Estados Unidos, Colombia, Perú, Ecuador, Panamá y España**. Donde se encuentre su negocio, COMPECER le asiste.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics & Badges Grid (Right side) -->
+                <div class="lg:col-span-5 space-y-8 lg:pl-4">
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-xl space-y-8">
+                        <div class="text-center pb-6 border-b border-slate-100">
+                            <span class="text-[52px] font-black text-compecerBlue block leading-none">+18</span>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mt-2">Años de experiencia global</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <span class="text-3xl font-extrabold text-compecerBlue block">+2,500</span>
+                                <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-1">Empresas Certificadas</span>
+                            </div>
+                            <div class="border-l border-slate-100">
+                                <span class="text-3xl font-extrabold text-compecerBlue block">+200</span>
+                                <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-1">Auditores Calificados</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center justify-center space-y-3">
+                            <span class="text-[10px] font-bold text-compecerLightGrey uppercase tracking-widest">Reconocido globalmente por</span>
+                            <div class="flex items-center justify-center gap-6 w-full opacity-80">
+                                <!-- Placeholders for EMA & IAF styling -->
+                                <div class="text-center font-extrabold text-compecerDarkGrey tracking-tighter text-sm flex items-center gap-1">
+                                    <span class="h-6 w-1.5 bg-compecerBlue inline-block rounded"></span>
+                                    <span>EMA ACREDITADO</span>
+                                </div>
+                                <div class="text-center font-extrabold text-compecerBlue tracking-tight text-sm border border-compecerBlue/20 px-2 py-0.5 rounded bg-white">
+                                    <span>IAF MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE DE SECTORES (SECTORS AT ISO) -->
+    <section id="sectores" class="py-20 bg-white border-b border-slate-100 scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-full">Sectores de Especialidad</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                    Experiencia en las industrias de mayor exigencia
+                </h2>
+                <p class="text-slate-600 mt-4 text-sm sm:text-base">
+                    Nuestros auditores están altamente capacitados en las complejidades particulares de cada sector, garantizando auditorías constructivas y enfocadas en la mejora real.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <!-- Sector Manufactura -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-industry text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Manufactura</span>
+                </div>
+
+                <!-- Sector Logística -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-truck-ramp-box text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Logística</span>
+                </div>
+
+                <!-- Sector Construcción -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-helmet-safety text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Construcción</span>
+                </div>
+
+                <!-- Sector TI -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-laptop-code text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">TI & Software</span>
+                </div>
+
+                <!-- Sector Agroindustria -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-wheat-awn text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Agroindustria</span>
+                </div>
+
+                <!-- Sector Servicios -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-handshake-angle text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Servicios</span>
+                </div>
+
+                <!-- Sector Energía -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center justify-center group hover:bg-compecerBlue hover:text-white transition-all duration-300 col-span-2 md:col-span-1">
+                    <div class="h-12 w-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-compecerBlue mb-4 group-hover:bg-white/10 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-bolt-lightning text-xl"></i>
+                    </div>
+                    <span class="text-xs font-bold tracking-tight block">Energía</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE DE PROCESO (THE ROADMAP) -->
+    <section id="proceso" class="py-20 md:py-28 bg-slate-50 border-b border-slate-100 scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-100 px-3 py-1 rounded-full">Ruta de Certificación</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                    Un proceso ágil, estructurado y sin complicaciones
+                </h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    Nuestra metodología está diseñada para simplificar las auditorías de certificación, manteniendo el máximo rigor técnico pero minimizando las fricciones organizacionales.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Decorative Connecting Line for desktop -->
+                <div class="hidden md:block absolute top-[64px] left-[12%] right-[12%] h-[2px] bg-slate-200 z-0"></div>
+
+                <!-- Paso 1 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                    <div class="h-14 w-14 rounded-full bg-blue-50 text-compecerBlue flex items-center justify-center font-black text-lg border-4 border-white shadow-md mb-6 relative">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-compecerBlue mb-2">Cotización y Contrato</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Evaluamos el tamaño, cantidad de sitios y alcance de su organización para emitir una cotización transparente y formalizar el servicio de certificación.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                    <div class="h-14 w-14 rounded-full bg-blue-50 text-compecerBlue flex items-center justify-center font-black text-lg border-4 border-white shadow-md mb-6 relative">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-compecerBlue mb-2">Auditorías</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Llevamos a cabo las etapas de auditoría (Etapa 1 revisión documental y Etapa 2 evaluación en sitio/campo) con nuestro equipo de auditores expertos.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                    <div class="h-14 w-14 rounded-full bg-blue-50 text-compecerBlue flex items-center justify-center font-black text-lg border-4 border-white shadow-md mb-6 relative">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-compecerBlue mb-2">Cierre de Desviaciones</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        En caso de detectarse no conformidades, su organización presenta planes de acción para corregirlas, contando con acompañamiento en los plazos normativos.
+                    </p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                    <div class="h-14 w-14 rounded-full bg-blue-50 text-compecerBlue flex items-center justify-center font-black text-lg border-4 border-white shadow-md mb-6 relative">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-compecerBlue mb-2">Emisión del Certificado</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        El Comité de Dictamen de COMPECER valida técnicamente el expediente y emite su certificado oficial de calidad ISO 9001 con validez por 3 años.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE FORMULARIO B2B DE ALTA CONVERSIÓN -->
+    <section id="formulario" class="py-20 md:py-28 bg-white scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Context Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-full">Solicitar Propuesta</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue tracking-tight">
+                        Inicie hoy mismo el camino a la certificación
+                    </h2>
+                    <p class="text-slate-600 text-base">
+                        Complete el formulario confidencial de solicitud técnica. Un ejecutivo especialista en el sector manufacturero y de servicios analizará sus datos para prepararle una propuesta económica a la medida.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4 border-t border-slate-100">
+                        <div class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-regular fa-clock text-compecerBlue text-lg"></i>
+                            <span class="text-sm font-medium">Respuesta técnica en menos de 24 horas hábiles.</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-regular fa-folder-open text-compecerBlue text-lg"></i>
+                            <span class="text-sm font-medium">Cotizaciones claras, sin tarifas ni cargos ocultos.</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-regular fa-handshake text-compecerBlue text-lg"></i>
+                            <span class="text-sm font-medium">Confidencialidad absoluta de sus datos y procesos.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Box -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-2xl relative">
+                        <!-- Heading of form -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-compecerBlue">Solicitud de Cotización B2B</h3>
+                            <p class="text-xs text-slate-500 mt-1">Campos obligatorios para generar una propuesta precisa.</p>
+                        </div>
+
+                        <!-- Main Form -->
+                        <form id="b2b-contact-form" class="space-y-6">
+                            
+                            <!-- Row 1: Nombre y Cargo -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Nombre Completo *</label>
+                                    <input type="text" id="name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors" placeholder="Ej. Ing. Carlos Pérez">
+                                </div>
+                                <div>
+                                    <label for="cargo" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Cargo / Puesto *</label>
+                                    <input type="text" id="cargo" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors" placeholder="Ej. Gerente de Calidad / Planta">
+                                </div>
+                            </div>
+
+                            <!-- Row 2: Empresa y Número de Empleados -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="empresa" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Nombre de la Empresa *</label>
+                                    <input type="text" id="empresa" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors" placeholder="Ej. Industrias Metálicas S.A.">
+                                </div>
+                                <div>
+                                    <label for="empleados" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5 font-semibold">Número de Empleados *</label>
+                                    <select id="empleados" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors">
+                                        <option value="">Seleccione rango...</option>
+                                        <option value="1-10">1 - 10 empleados</option>
+                                        <option value="11-50">11 - 50 empleados</option>
+                                        <option value="51-200">51 - 200 empleados</option>
+                                        <option value="201-500">201 - 500 empleados</option>
+                                        <option value="500+">Más de 500 empleados</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Row 3: Norma de Interés y Urgencia -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="norma" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Norma a Certificar *</label>
+                                    <select id="norma" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors">
+                                        <option value="ISO 9001:2015" selected>ISO 9001:2015 (Gestión de Calidad)</option>
+                                        <option value="ISO 14001:2015">ISO 14001:2015 (Gestión Ambiental)</option>
+                                        <option value="ISO 45001:2018">ISO 45001:2018 (Seguridad y Salud)</option>
+                                        <option value="Multi-Norma">Integrado / Multi-Norma</option>
+                                        <option value="Otro">Otra Norma / Competencias Laborales</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="urgencia" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Urgencia del Proyecto *</label>
+                                    <select id="urgencia" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors">
+                                        <option value="">Seleccione urgencia...</option>
+                                        <option value="Critico">Inmediata (Licitación en curso)</option>
+                                        <option value="Corto Plazo">Corto Plazo (1 a 3 meses)</option>
+                                        <option value="Mediano Plazo">Planificación (3 a 6 meses)</option>
+                                        <option value="Informativo">Solo información de presupuesto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Row 4: Motivo Principal & País -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="motivo" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Motivo de Certificación *</label>
+                                    <select id="motivo" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors">
+                                        <option value="">Seleccione motivo...</option>
+                                        <option value="Licitaciones">Participar en Licitaciones</option>
+                                        <option value="Requisito de Cliente">Exigencia de Clientes actuales</option>
+                                        <option value="Mejora de Procesos">Mejora de Procesos Internos</option>
+                                        <option value="Expansión">Entrar a nuevos mercados globales</option>
+                                        <option value="Renovación">Cambio de Organismo Certificador</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="pais" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">País de Operación *</label>
+                                    <select id="pais" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors">
+                                        <option value="">Seleccione país...</option>
+                                        <option value="Mexico">México</option>
+                                        <option value="USA">Estados Unidos</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Peru">Perú</option>
+                                        <option value="Ecuador">Ecuador</option>
+                                        <option value="Panama">Panamá</option>
+                                        <option value="Espana">España</option>
+                                        <option value="Otro">Otro País</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Row 5: Contacto Directo -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="email" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Correo Corporativo *</label>
+                                    <input type="email" id="email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors" placeholder="carlos.perez@empresa.com">
+                                </div>
+                                <div>
+                                    <label for="telefono" class="block text-xs font-bold text-compecerBlue uppercase tracking-wide mb-1.5">Teléfono Directo (con LADA) *</label>
+                                    <input type="tel" id="telefono" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-compecerBlue transition-colors" placeholder="Ej. +52 55 1234 5678">
+                                </div>
+                            </div>
+
+                            <!-- Consent checkbox -->
+                            <div class="flex items-start gap-3 pt-2">
+                                <input type="checkbox" id="consentimiento" required class="mt-1 h-4 w-4 text-compecerBlue border-slate-300 rounded focus:ring-compecerBlue">
+                                <label for="consentimiento" class="text-xs text-slate-500 leading-normal">
+                                    Acepto el tratamiento de mis datos personales de acuerdo con el Aviso de Privacidad de COMPECER y autorizo el envío de propuestas económicas a mi correo electrónico corporativo. *
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div>
+                                <button type="submit" class="w-full bg-compecerBlue text-white hover:bg-opacity-95 font-bold py-4 px-6 rounded-xl text-base shadow-lg shadow-blue-900/10 transition-all flex items-center justify-center gap-2">
+                                    <span>Solicitar Cotización Formal</span>
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Modal de éxito oculto -->
+                        <div id="success-modal" class="hidden absolute inset-0 bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center z-10">
+                            <div class="h-20 w-20 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-4xl mb-6 shadow-sm">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-compecerBlue">¡Solicitud Enviada con Éxito!</h3>
+                            <p class="text-slate-600 text-sm mt-3 max-w-md mx-auto leading-relaxed">
+                                Gracias por contactar a **COMPECER**. Un auditor experto en el sector manufacturero ha sido asignado a su solicitud y le contactará en breve al correo corporativo proporcionado para iniciar su cotización.
+                            </p>
+                            <button onclick="resetContactForm()" class="mt-8 text-sm font-semibold text-compecerBlue border border-slate-300 hover:border-compecerBlue px-6 py-2.5 rounded-lg transition-all">
+                                Solicitar otra cotización
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO (PRUEBA SOCIAL Y TESTIMONIALES) -->
+    <section id="testimonios" class="py-20 md:py-28 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-100 px-3 py-1 rounded-full">Casos de Éxito</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                    Empresas industriales que transformaron su negocio
+                </h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    Conozca los testimonios de directivos de manufactura que desbloquearon su potencial comercial tras obtener su certificación con nosotros.
+                </p>
+            </div>
+
+            <!-- Testimonial Slider / Grid Wrapper -->
+            <div class="relative max-w-4xl mx-auto">
+                <div class="relative overflow-hidden rounded-2xl bg-white border border-slate-200/60 shadow-xl p-8 md:p-12">
+                    
+                    <!-- Slide Container -->
+                    <div id="testimonial-carousel">
+                        
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide space-y-6 block">
+                            <div class="flex flex-col md:flex-row gap-6 items-center">
+                                <!-- Mock Video / Image Cover with Play Overlay -->
+                                <div class="relative shrink-0 w-full md:w-[240px] h-[160px] rounded-xl overflow-hidden shadow-md group">
+                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" alt="Planta metalmecánica certificada" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                        <button onclick="playMockVideo('Ing. Alejandro Domínguez - Planta de Estampado de Acero')" class="h-12 w-12 rounded-full bg-white text-compecerBlue flex items-center justify-center text-lg shadow-lg hover:scale-110 transition-transform" aria-label="Ver video testimonio">
+                                            <i class="fa-solid fa-play ml-1"></i>
+                                        </button>
+                                    </div>
+                                    <span class="absolute bottom-2 right-2 text-[10px] text-white bg-black/60 px-2 py-0.5 rounded font-mono">1:42 Min</span>
+                                </div>
+                                <!-- Testimonial Text -->
+                                <div class="flex-1 space-y-4">
+                                    <div class="flex text-amber-400 gap-1">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <blockquote class="text-base text-slate-700 italic leading-relaxed">
+                                        "Estábamos perdiendo un promedio de 4 licitaciones públicas al año por no tener un SGC certificado bajo ISO 9001. Decidimos certificarnos con COMPECER y la experiencia fue excelente. Sus auditores son expertos en manufactura pesada y nos ayudaron a optimizar procesos que antes dábamos por correctos. Gracias a esto, cerramos el contrato de proveeduría automotriz más grande en nuestra historia."
+                                    </blockquote>
+                                    <div>
+                                        <cite class="block font-bold text-compecerBlue text-sm not-italic">Ing. Alejandro Domínguez</cite>
+                                        <span class="block text-xs text-slate-500">Director de Operaciones, Metalúrgica del Norte</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide space-y-6 hidden">
+                            <div class="flex flex-col md:flex-row gap-6 items-center">
+                                <!-- Mock Video / Image Cover with Play Overlay -->
+                                <div class="relative shrink-0 w-full md:w-[240px] h-[160px] rounded-xl overflow-hidden shadow-md group">
+                                    <img src="https://images.unsplash.com/photo-1558441719-ff34b0524a24?auto=format&fit=crop&w=400&q=80" alt="Línea de empaque certificada" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                        <button onclick="playMockVideo('Lic. Marta Ruiz - Planta de Empaque Alimentario')" class="h-12 w-12 rounded-full bg-white text-compecerBlue flex items-center justify-center text-lg shadow-lg hover:scale-110 transition-transform" aria-label="Ver video testimonio">
+                                            <i class="fa-solid fa-play ml-1"></i>
+                                        </button>
+                                    </div>
+                                    <span class="absolute bottom-2 right-2 text-[10px] text-white bg-black/60 px-2 py-0.5 rounded font-mono">2:15 Min</span>
+                                </div>
+                                <!-- Testimonial Text -->
+                                <div class="flex-1 space-y-4">
+                                    <div class="flex text-amber-400 gap-1">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <blockquote class="text-base text-slate-700 italic leading-relaxed">
+                                        "Los clientes en el extranjero nos pusieron un ultimátum: o certificábamos el sistema de gestión en 6 meses o buscaban otro socio comercial. COMPECER entendió la urgencia de nuestro caso. Planificaron las auditorías de inmediato y el proceso fue sumamente claro y estructurado. Logramos mantener nuestra mayor cuenta internacional y expandir la exportación."
+                                    </blockquote>
+                                    <div>
+                                        <cite class="block font-bold text-compecerBlue text-sm not-italic">Lic. Marta Ruiz</cite>
+                                        <span class="block text-xs text-slate-500">Gerente General, Alimentos Selectos de Occidente</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slide Controls -->
+                    <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
+                        <div class="flex gap-2">
+                            <span class="dot-indicator h-2 w-6 rounded-full bg-compecerBlue transition-all" onclick="setSlide(0)"></span>
+                            <span class="dot-indicator h-2 w-2 rounded-full bg-slate-300 transition-all" onclick="setSlide(1)"></span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="prevSlide()" class="h-10 w-10 rounded-full border border-slate-200 hover:border-compecerBlue hover:text-compecerBlue flex items-center justify-center text-slate-600 transition-all">
+                                <i class="fa-solid fa-arrow-left text-sm"></i>
+                            </button>
+                            <button onclick="nextSlide()" class="h-10 w-10 rounded-full border border-slate-200 hover:border-compecerBlue hover:text-compecerBlue flex items-center justify-center text-slate-600 transition-all">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO MODAL PLAYER (MOCKUP) -->
+    <div id="video-modal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl">
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <span class="font-bold text-sm text-compecerBlue" id="video-title">Caso de Éxito Manufactura</span>
+                <button onclick="closeVideoModal()" class="text-slate-400 hover:text-slate-600 font-bold p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <!-- Video Mock Element -->
+            <div class="bg-slate-950 aspect-video relative flex flex-col items-center justify-center text-white p-6">
+                <div class="text-center space-y-4">
+                    <div class="h-16 w-16 rounded-full bg-compecerBlue text-white flex items-center justify-center text-2xl mx-auto shadow-lg animate-pulse">
+                        <i class="fa-solid fa-play ml-1"></i>
+                    </div>
+                    <p class="text-sm font-medium">Cargando reproductor de video testimonial seguro...</p>
+                    <p class="text-xs text-slate-400 max-w-sm mx-auto">En un entorno productivo real, aquí se reproducirá el testimonio en video alojado en su plataforma de elección (YouTube, Vimeo o Wistia).</p>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-50 text-right">
+                <button onclick="closeVideoModal()" class="bg-compecerBlue text-white px-5 py-2 rounded-lg text-xs font-semibold">Cerrar Reproductor</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOQUE DE PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-20 md:py-28 bg-white scroll-mt-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-compecerBlue tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-full">Preguntas Frecuentes</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-compecerBlue mt-3 tracking-tight">
+                    Todo lo que necesita saber sobre el proceso de certificación
+                </h2>
+                <p class="text-slate-600 mt-4 text-sm sm:text-base">
+                    Respondemos de forma transparente a las dudas comunes de directores y gerentes de calidad.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cuánto tiempo toma obtener la certificación ISO 9001?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            El tiempo aproximado oscila entre **3 y 6 meses**, dependiendo enteramente del grado de madurez actual del Sistema de Gestión de Calidad (SGC) de la empresa, su tamaño y la cantidad de sedes o plantas operativas. En situaciones de urgencia, se diseña un calendario de auditorías optimizado para acelerar la evaluación.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cuáles son los requisitos previos esenciales antes de realizar la auditoría?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            Los requisitos fundamentales antes de la auditoría de certificación de Etapa 2 son:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Tener implementado el SGC bajo la norma ISO 9001:2015.</li>
+                                <li>Contar con evidencias de ejecución de procesos (registros de calidad).</li>
+                                <li>Haber realizado al menos una Auditoría Interna completa.</li>
+                                <li>Haber efectuado la Revisión por la Dirección de los resultados del sistema.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cuál es la diferencia entre un curso de capacitación y la certificación?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            Un curso o diplomado capacita al personal de forma individual y otorga un diploma o constancia de competencias a la persona. La **certificación** es un proceso institucional en el cual un Organismo Acreditado (como COMPECER) somete a evaluación formal a **toda la organización** para verificar que cumple con la norma ISO 9001, emitiendo un Certificado oficial a nombre de la empresa.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cuál es el alcance del certificado que emite COMPECER?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            El alcance describe los procesos y sitios específicos que han sido evaluados y aprobados (por ejemplo: "Diseño, fabricación y distribución de componentes plásticos inyectados"). Este alcance se define en conjunto en la etapa de cotización y se imprime de forma explícita en su documento de certificación final.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿En qué países tienen validez oficial sus certificaciones?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            Gracias a nuestra acreditación oficial por la EMA (Entidad Mexicana de Acreditación) y la incorporación activa al acuerdo de reconocimiento mutuo de la IAF (International Accreditation Forum), nuestros certificados tienen **plena validez y reconocimiento legal global**. Son aceptados por clientes e instituciones en más de 100 países.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cómo es el proceso de transición si ya estamos certificados con otro organismo?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            La transición o transferencia es sumamente sencilla, transparente y **sin costo administrativo adicional** en COMPECER. Solo requerimos validar su certificado vigente emitido por otro organismo acreditado, los reportes de las últimas auditorías y procederemos a emitir un nuevo certificado bajo nuestro sello, respetando su ciclo original de vigencia de 3 años.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                    <button class="w-full text-left p-6 font-bold text-compecerBlue text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Cómo se calcula el costo de una cotización de certificación?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50/50">
+                        <div class="p-6 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                            El costo se calcula con base en las directrices de los criterios de acreditación del IAF, que determinan un número fijo de **días-auditor** requeridos. Este cálculo se basa principalmente en la cantidad total de empleados (personal efectivo), el nivel de riesgo de la actividad (la manufactura es riesgo medio/alto), la cantidad de sitios físicos que se van a auditar y la complejidad de los procesos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST LOGOS & SECURITY / ASSURANCE FOOTER -->
+    <section class="bg-slate-50 border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-[10px] font-bold text-compecerLightGrey uppercase tracking-widest block">Cumplimiento y Acreditaciones Oficiales</span>
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-75">
+                <div class="flex items-center gap-2 text-compecerDarkGrey font-extrabold text-xs tracking-tight">
+                    <span class="h-6 w-1 bg-compecerBlue inline-block rounded"></span>
+                    EMA CERTIFICADOR DE SISTEMAS
+                </div>
+                <div class="flex items-center gap-2 text-compecerBlue font-bold text-xs border border-compecerBlue/20 px-3 py-1 rounded bg-white shadow-sm">
+                    IAF ACCREDITED SGC
+                </div>
+                <div class="flex items-center gap-2 text-compecerDarkGrey font-extrabold text-xs tracking-tight">
+                    <span class="h-6 w-1 bg-compecerBlue inline-block rounded"></span>
+                    RED NACIONAL CONOCER
+                </div>
+                <div class="flex items-center gap-2 text-compecerDarkGrey font-extrabold text-xs tracking-tight">
+                    <span class="h-6 w-1 bg-compecerBlue inline-block rounded"></span>
+                    ISO 17024 COMPETENCIAS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-compecerBlue text-white py-12 border-t border-blue-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- Brand Info Column -->
+                <div class="md:col-span-4 space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="h-10 w-10 rounded-lg bg-white flex items-center justify-center text-compecerBlue font-extrabold text-xl tracking-wider">
+                            C
+                        </div>
+                        <div>
+                            <span class="text-xl font-black text-white tracking-tight block leading-none">COMPECER</span>
+                            <span class="text-[9px] font-semibold text-blue-200 tracking-widest uppercase block mt-0.5">Organismo de Certificación</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-100/75 leading-relaxed max-w-sm">
+                        Somos un organismo de certificación enfocado en elevar el desempeño comercial de las organizaciones mediante evaluaciones ágiles, validez global e independencia técnica.
+                    </p>
+                </div>
+
+                <!-- Fast Links -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="font-bold text-sm tracking-wide uppercase text-compecerGold">Enlaces</h4>
+                    <ul class="space-y-2 text-xs text-blue-100/80">
+                        <li><a href="#dolores" class="hover:text-white hover:underline transition-all">¿Por qué ISO 9001?</a></li>
+                        <li><a href="#autoridad" class="hover:text-white hover:underline transition-all">Nuestra Autoridad</a></li>
+                        <li><a href="#proceso" class="hover:text-white hover:underline transition-all">Proceso de Certificación</a></li>
+                        <li><a href="#sectores" class="hover:text-white hover:underline transition-all">Sectores Atendidos</a></li>
+                        <li><a href="#faq" class="hover:text-white hover:underline transition-all">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact details -->
+                <div class="md:col-span-5 space-y-4">
+                    <h4 class="font-bold text-sm tracking-wide uppercase text-compecerGold">Contacto & Cobertura</h4>
+                    <p class="text-xs text-blue-100/80 leading-normal">
+                        Oficina Central: Ciudad de México, México. Operando en EE.UU., Colombia, Perú, Ecuador, Panamá y España.
+                    </p>
+                    <div class="space-y-2 text-xs text-blue-100/80 pt-2">
+                        <a href="mailto:contacto@compecer.com" class="flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fa-regular fa-envelope text-compecerGold"></i>
+                            <span>contacto@compecer.com</span>
+                        </a>
+                        <a href="tel:+525500000000" class="flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fa-solid fa-phone text-compecerGold"></i>
+                            <span>+52 (55) 0000-0000</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Legals footer border -->
+            <div class="mt-12 pt-6 border-t border-blue-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-blue-200/60">
+                <p>&copy; 2026 COMPECER Organismo de Certificación. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Aviso de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos y Condiciones</a>
+                    <a href="#" class="hover:text-white transition-colors">Acreditaciones Técnicas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close mobile menu on nav link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Toggle FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle current FAQ content maximum height
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.remove('bg-slate-50');
+            } else {
+                // Close all other FAQs first (Accordion effect)
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.style.maxHeight = '0px';
+                    const parentBtn = item.previousElementSibling;
+                    parentBtn.querySelector('i').style.transform = 'rotate(0deg)';
+                    parentBtn.classList.remove('bg-slate-50');
+                });
+
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.add('bg-slate-50');
+            }
+        }
+
+        // B2B Form Handler - Emulates B2B Lead Capturing
+        const contactForm = document.getElementById('b2b-contact-form');
+        const successModal = document.getElementById('success-modal');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Gather values for B2B validation / analytics tracing
+            const leadData = {
+                nombre: document.getElementById('name').value,
+                cargo: document.getElementById('cargo').value,
+                empresa: document.getElementById('empresa').value,
+                empleados: document.getElementById('empleados').value,
+                norma: document.getElementById('norma').value,
+                urgencia: document.getElementById('urgencia').value,
+                motivo: document.getElementById('motivo').value,
+                pais: document.getElementById('pais').value,
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('telefono').value,
+                consentimiento: document.getElementById('consentimiento').checked
+            };
+
+            // Mimicking B2B validation (e.g. check corporate email type if needed)
+            console.log('Lead B2B capturado con éxito:', leadData);
+
+            // Show success layer in UI (avoid alerts completely)
+            successModal.classList.remove('hidden');
+        });
+
+        function resetContactForm() {
+            contactForm.reset();
+            successModal.classList.add('hidden');
+        }
+
+        // Testimonial Carousel Mechanics
+        let activeSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot-indicator');
+
+        function setSlide(index) {
+            slides.forEach((slide, idx) => {
+                if (idx === index) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('block');
+                } else {
+                    slide.classList.remove('block');
+                    slide.classList.add('hidden');
+                }
+            });
+
+            dots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.className = 'dot-indicator h-2 w-6 rounded-full bg-compecerBlue transition-all';
+                } else {
+                    dot.className = 'dot-indicator h-2 w-2 rounded-full bg-slate-300 transition-all';
+                }
+            });
+            activeSlide = index;
+        }
+
+        function nextSlide() {
+            let next = activeSlide + 1;
+            if (next >= slides.length) next = 0;
+            setSlide(next);
+        }
+
+        function prevSlide() {
+            let prev = activeSlide - 1;
+            if (prev < 0) prev = slides.length - 1;
+            setSlide(prev);
+        }
+
+        // Testimonial Mock Video Player Modal
+        const videoModal = document.getElementById('video-modal');
+        const videoTitle = document.getElementById('video-title');
+
+        function playMockVideo(clientTitle) {
+            videoTitle.textContent = `Caso de Éxito: ${clientTitle}`;
+            videoModal.classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
