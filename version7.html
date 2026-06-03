@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificación ISO 9001 para Licitaciones | COMPECER</title>
+
+  <style>
+    :root {
+      --blue: #040079;
+      --yellow: #ffb000;
+      --gray-light: #999999;
+      --gray-dark: #4d4d4d;
+      --white: #ffffff;
+      --soft-bg: #f6f8fc;
+      --border: #e7e9f2;
+      --text: #202236;
+      --muted: #666b7a;
+      --shadow: 0 18px 50px rgba(4, 0, 121, 0.10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.55;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(4, 0, 121, 0.06);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    h1, h2, h3 {
+      color: var(--blue);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2vw, 22px);
+      color: #3f4254;
+      max-width: 710px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(4, 0, 121, .22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(4, 0, 121, .28);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--blue);
+      border-color: rgba(4, 0, 121, .18);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(4, 0, 121, .05);
+    }
+
+    .btn-accent {
+      background: var(--yellow);
+      color: #171717;
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      filter: brightness(.98);
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      color: var(--blue);
+      letter-spacing: -0.03em;
+      font-size: 22px;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--blue);
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 13px;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--yellow);
+      border-radius: 50%;
+      right: -3px;
+      bottom: -3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .mobile-toggle {
+      display: none;
+      border: 0;
+      background: var(--soft-bg);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      cursor: pointer;
+      color: var(--blue);
+      font-size: 24px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0 70px;
+      background:
+        radial-gradient(circle at 80% 12%, rgba(255, 176, 0, .13), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f7f8fd 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .proof-pill {
+      padding: 10px 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--gray-dark);
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 10px 28px rgba(4, 0, 121, .05);
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      min-height: 560px;
+      box-shadow: var(--shadow);
+      background: var(--blue);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      opacity: .92;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4,0,121,.05), rgba(4,0,121,.72));
+    }
+
+    .floating-panel {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.45);
+    }
+
+    .floating-panel strong {
+      color: var(--blue);
+      font-size: 20px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .floating-panel p {
+      font-size: 15px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 14px 34px rgba(4, 0, 121, .06);
+      transition: .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 44px rgba(4, 0, 121, .10);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(4, 0, 121, .07);
+      color: var(--blue);
+      font-weight: 900;
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .pain {
+      background: var(--white);
+    }
+
+    .intent {
+      background: var(--soft-bg);
+    }
+
+    .intent .card {
+      background: var(--white);
+      min-height: 230px;
+    }
+
+    .card-link {
+      display: inline-flex;
+      margin-top: 16px;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .industries {
+      background: var(--white);
+    }
+
+    .industry-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .industry-item {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-weight: 850;
+      color: var(--blue);
+      background: linear-gradient(180deg, #ffffff, #fafbff);
+    }
+
+    .authority {
+      background:
+        linear-gradient(135deg, rgba(4,0,121,.96), rgba(4,0,121,.88)),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: var(--white);
+    }
+
+    .authority h2,
+    .authority h3 {
+      color: var(--white);
+    }
+
+    .authority p {
+      color: rgba(255,255,255,.78);
+    }
+
+    .authority .eyebrow {
+      background: rgba(255,255,255,.12);
+      color: var(--white);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .stat {
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 26px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-number {
+      color: var(--yellow);
+      font-size: 38px;
+      font-weight: 950;
+      letter-spacing: -0.05em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .wide-stat {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .country {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(255,255,255,.9);
+    }
+
+    .process {
+      background: var(--soft-bg);
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+    }
+
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .form-section {
+      background: var(--white);
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 42px;
+      align-items: start;
+      background: var(--soft-bg);
+      border-radius: 34px;
+      padding: 42px;
+      border: 1px solid var(--border);
+    }
+
+    .form-note {
+      margin-top: 28px;
+      padding: 22px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: span 2;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 850;
+      color: var(--gray-dark);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #dfe3ef;
+      border-radius: 14px;
+      padding: 14px 14px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: .2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(4, 0, 121, .08);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 18px;
+      border: none;
+    }
+
+    .privacy {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--gray-light);
+    }
+
+    .success {
+      display: none;
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(4, 0, 121, .07);
+      color: var(--blue);
+      font-weight: 850;
+    }
+
+    .cta-final {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,176,0,.14), transparent 25%),
+        linear-gradient(180deg, #ffffff, #f8f9ff);
+      text-align: center;
+    }
+
+    .cta-final .lead {
+      margin: 0 auto;
+    }
+
+    .cta-final .hero-actions {
+      justify-content: center;
+    }
+
+    .footer {
+      background: #07062d;
+      padding: 34px 0;
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .form-wrap,
+      .wide-stat {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+
+      .hero-card img {
+        height: 420px;
+      }
+
+      .cards,
+      .stats,
+      .industry-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .wide-stat {
+        grid-column: span 2;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 76px 20px auto 20px;
+        padding: 22px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 56px 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cards,
+      .stats,
+      .industry-list,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide-stat,
+      .field.full {
+        grid-column: span 1;
+      }
+
+      .form-wrap {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      form {
+        padding: 22px;
+      }
+
+      .floating-panel {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="COMPECER">
+        <span class="logo-mark">C</span>
+        COMPECER
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#dolor">Dolor comercial</a>
+        <a href="#sectores">Sectores</a>
+        <a href="#autoridad">Autoridad</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#cotizar">Cotizar</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Certificación ISO 9001 para empresas B2B</span>
+          <h1>No pierdas licitaciones por no tener ISO 9001</h1>
+          <p class="lead">
+            En México, cada vez más compradores, corporativos y dependencias solicitan certificaciones antes de adjudicar contratos. Llega preparado con una certificación que respalde la calidad de tu empresa.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cotizar" class="btn btn-primary">Cotizar certificación ISO 9001</a>
+            <a href="#necesidad" class="btn btn-secondary">Tengo una licitación próxima</a>
+          </div>
+
+          <div class="hero-proof">
+            <span class="proof-pill">+18 años de experiencia</span>
+            <span class="proof-pill">+2,500 empresas certificadas</span>
+            <span class="proof-pill">Acreditados por EMA</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+            alt="Equipo industrial revisando procesos de calidad"
+          />
+          <div class="floating-panel">
+            <strong>Cuando el cliente pide ISO 9001, no basta con prometer calidad.</strong>
+            <p>Necesitas demostrarla con evidencia formal para competir por nuevos contratos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pain" id="dolor">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Dolor comercial</span>
+          <h2>El contrato puede perderse antes de presentar tu propuesta</h2>
+          <p>
+            Tu empresa puede tener capacidad, experiencia y buen servicio. Pero si una licitación o cliente grande solicita ISO 9001 y no puedes presentarla, podrías quedar fuera desde el primer filtro.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>Una licitación exige ISO 9001</h3>
+            <p>Necesitas cumplir requisitos documentales para avanzar en el proceso.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Un cliente quiere aprobarte</h3>
+            <p>La certificación puede ser clave para homologarte como proveedor.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Tu competencia ya está certificada</h3>
+            <p>Cuando todo se compara, la evidencia formal de calidad pesa.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">04</div>
+            <h3>Tu certificado está por vencer</h3>
+            <p>Evita afectar contratos activos por falta de vigencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intent" id="necesidad">
+      <div class="container">
+        <span class="eyebrow">Necesidades del embudo</span>
+        <h2>¿Qué necesitas resolver hoy?</h2>
+        <p class="lead">
+          La certificación ISO 9001 puede responder a distintos momentos comerciales: urgencia, expansión, renovación o entrada a nuevos mercados.
+        </p>
+
+        <div class="cards" style="margin-top: 34px;">
+          <div class="card">
+            <div class="icon">↗</div>
+            <h3>Voy por una licitación</h3>
+            <p>Cotiza tu certificación y prepara a tu empresa para cumplir requisitos del proceso.</p>
+            <a href="#cotizar" class="card-link">Cotizar para licitación →</a>
+          </div>
+
+          <div class="card">
+            <div class="icon">✓</div>
+            <h3>Un cliente me pidió ISO 9001</h3>
+            <p>Responde con una certificación que respalde tu calidad ante compradores exigentes.</p>
+            <a href="#cotizar" class="card-link">Solicitar propuesta →</a>
+          </div>
+
+          <div class="card">
+            <div class="icon">★</div>
+            <h3>Quiero ganar contratos más grandes</h3>
+            <p>Fortalece tu perfil como proveedor confiable en México y mercados internacionales.</p>
+            <a href="#cotizar" class="card-link">Evaluar certificación →</a>
+          </div>
+
+          <div class="card">
+            <div class="icon">⟳</div>
+            <h3>Necesito renovar mi certificado</h3>
+            <p>Mantén continuidad comercial y evita fricciones con clientes actuales.</p>
+            <a href="#cotizar" class="card-link">Renovar certificación →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section industries" id="sectores">
+      <div class="container">
+        <span class="eyebrow">Industrias</span>
+        <h2>Para empresas que compiten en mercados exigentes</h2>
+        <p class="lead">
+          ISO 9001 es especialmente relevante cuando tus clientes revisan procesos, cumplimiento, documentación y capacidad operativa antes de contratar.
+        </p>
+
+        <div class="industry-list">
+          <div class="industry-item">Manufactura</div>
+          <div class="industry-item">Construcción e infraestructura</div>
+          <div class="industry-item">Logística y transporte</div>
+          <div class="industry-item">Servicios B2B</div>
+          <div class="industry-item">Tecnología</div>
+          <div class="industry-item">Alimentos, empaque y cadena de suministro</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section authority" id="autoridad">
+      <div class="container">
+        <span class="eyebrow">Autoridad COMPECER</span>
+        <h2>Certifícate con respaldo, experiencia y alcance internacional</h2>
+        <p class="lead">
+          Cuando la certificación se presenta ante clientes, licitaciones o corporativos, el respaldo importa.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">+18</span>
+            <h3>años de experiencia</h3>
+            <p>Impulsando procesos de certificación para empresas que buscan competir con mayor solidez.</p>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">+2,500</span>
+            <h3>empresas certificadas</h3>
+            <p>Organizaciones de distintos sectores han fortalecido su posición comercial con COMPECER.</p>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">+200</span>
+            <h3>auditores calificados</h3>
+            <p>Equipo auditor con experiencia técnica en múltiples industrias y sistemas de gestión.</p>
+          </div>
+
+          <div class="stat wide-stat">
+            <div>
+              <span class="stat-number">EMA + IAF</span>
+              <h3>Respaldo y validez global</h3>
+              <p>Acreditados por la EMA, Entidad Mexicana de Acreditación, e incorporados al IAF, Foro Internacional de Acreditación.</p>
+            </div>
+            <div>
+              <h3>Presencia internacional</h3>
+              <div class="countries">
+                <span class="country">México</span>
+                <span class="country">Estados Unidos</span>
+                <span class="country">Colombia</span>
+                <span class="country">Perú</span>
+                <span class="country">Ecuador</span>
+                <span class="country">Panamá</span>
+                <span class="country">España</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proceso">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Proceso claro</span>
+          <h2>Del requisito comercial al certificado</h2>
+          <p>
+            Un flujo simple para que tu empresa avance con claridad, especialmente cuando existe una licitación, cliente o contrato que exige ISO 9001.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cotizar" class="btn btn-primary">Iniciar cotización</a>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h3>Solicita tu cotización</h3>
+              <p>Comparte industria, ubicación, tamaño de empresa y motivo de certificación.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Revisión de alcance</h3>
+              <p>Se evalúa tu operación, sedes, norma requerida y urgencia comercial.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Propuesta comercial</h3>
+              <p>Recibes una propuesta alineada a tu empresa y necesidad.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Auditoría y dictamen</h3>
+              <p>Se realiza la evaluación correspondiente conforme a ISO 9001.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Emisión del certificado</h3>
+              <p>Si el resultado es favorable, obtienes tu certificación para presentarla ante clientes o licitaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section form-section" id="cotizar">
+      <div class="container form-wrap">
+        <div>
+          <span class="eyebrow">Cotización</span>
+          <h2>Cotiza tu ISO 9001 y compite por mejores contratos</h2>
+          <p>
+            Completa tus datos y recibe una propuesta de certificación según tu empresa, industria y urgencia comercial.
+          </p>
+
+          <div class="form-note">
+            <h3>Ideal si necesitas:</h3>
+            <p>
+              Participar en una licitación, responder a un cliente corporativo, homologarte como proveedor, renovar tu certificado o abrir nuevas oportunidades comerciales.
+            </p>
+          </div>
+        </div>
+
+        <form id="leadForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="cargo">Cargo</label>
+              <input id="cargo" name="cargo" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="email">Correo corporativo</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input id="telefono" name="telefono" type="tel" required />
+            </div>
+
+            <div class="field">
+              <label for="ubicacion">País / ciudad</label>
+              <input id="ubicacion" name="ubicacion" type="text" placeholder="Ej. México, Monterrey" required />
+            </div>
+
+            <div class="field">
+              <label for="industria">Industria</label>
+              <select id="industria" name="industria" required>
+                <option value="">Selecciona una opción</option>
+                <option>Manufactura</option>
+                <option>Construcción</option>
+                <option>Logística y transporte</option>
+                <option>Servicios B2B</option>
+                <option>Tecnología</option>
+                <option>Alimentos / empaque</option>
+                <option>Otra</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="colaboradores">Número de colaboradores</label>
+              <select id="colaboradores" name="colaboradores" required>
+                <option value="">Selecciona una opción</option>
+                <option>1 - 10</option>
+                <option>11 - 50</option>
+                <option>51 - 200</option>
+                <option>201 - 500</option>
+                <option>Más de 500</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="motivo">Motivo principal</label>
+              <select id="motivo" name="motivo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Licitación</option>
+                <option>Cliente me lo solicitó</option>
+                <option>Homologación como proveedor</option>
+                <option>Renovación de certificado</option>
+                <option>Expansión comercial</option>
+                <option>Exportación</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="urgencia">Urgencia</label>
+              <select id="urgencia" name="urgencia" required>
+                <option value="">Selecciona una opción</option>
+                <option>Inmediato</option>
+                <option>Este mes</option>
+                <option>1 a 3 meses</option>
+                <option>Estoy explorando opciones</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="mensaje">Mensaje adicional</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos si tienes una fecha límite, licitación próxima o requisito específico."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent form-submit">Recibir propuesta de certificación</button>
+
+          <p class="privacy">
+            Al enviar tus datos, aceptas ser contactado para dar seguimiento a tu solicitud comercial.
+          </p>
+
+          <div class="success" id="successMessage">
+            Solicitud recibida. Un ejecutivo comercial podrá contactarte para revisar el alcance de tu certificación.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section cta-final">
+      <div class="container">
+        <span class="eyebrow">Cierre comercial</span>
+        <h2>Tu próxima oportunidad puede pedir ISO 9001. Llega preparado.</h2>
+        <p class="lead">
+          Certifica tu empresa para competir en licitaciones, responder a clientes exigentes y abrir la puerta a nuevos contratos en México y otros mercados.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cotizar" class="btn btn-primary">Cotizar certificación ISO 9001</a>
+          <a href="#autoridad" class="btn btn-secondary">Ver respaldo COMPECER</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div><strong>COMPECER</strong> · Certificación ISO 9001 para empresas B2B</div>
+      <div>EMA · IAF · Presencia internacional</div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navLinks = document.getElementById("navLinks");
+    const leadForm = document.getElementById("leadForm");
+    const successMessage = document.getElementById("successMessage");
+
+    mobileToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+    leadForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const requiredFields = leadForm.querySelectorAll("[required]");
+      let isValid = true;
+
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = "#ffb000";
+          isValid = false;
+        } else {
+          field.style.borderColor = "#dfe3ef";
+        }
+      });
+
+      if (!isValid) return;
+
+      successMessage.style.display = "block";
+      leadForm.reset();
+
+      setTimeout(() => {
+        successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>
